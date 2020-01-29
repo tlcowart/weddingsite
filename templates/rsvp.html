@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% block head  %}
+<title>New RSVP</title> 
+{% endblock %}
+
+{% block body  %} 
+<h1>New RSVP</h1>	
+	
+	<hr>
+	<h2>Create New RSVP!</h2>
+	<form action='/rsvp' method='POST'>
+		<label for="name">Name</label>
+		<input class="form-control" type="text" name='name' id='name' placeholder="Enter Name" aria-label="Enter Name">
+		<br> 
+		<label for="guests">Guests</label>
+		<input class="form-control" type="text" name='guests' id='guests' placeholder="Enter Your Guest Count" aria-label="Enter Your Guest Count">
+		<br>
+		<label for="message">Message</label>
+		<textarea class="form-control" name="message" id="message" rows="3" placeholder="Enter A Message!" aria-label="Enter A Message!"></textarea>
+		<br>
+		<input type="submit" value="submit"/>
+	</form>
+	<hr>
+	
+{% endblock %}

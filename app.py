@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import desc
 from datetime import datetime
-
+import credentials
 
 app = Flask(__name__)
 
@@ -18,7 +18,8 @@ if ENV == 'dev':
 else:
     app.debug = False
     #Will add a postgres URI below once Heroku is setup
-    app.config['SQLALCHEMY_DATABASE_URI'] = ''
+    password = credentials.login['password']
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:' + password + '@localhost/WeddingSite'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
@@ -48,6 +49,10 @@ def submitted():
 @app.route('/story')
 def story():
     return render_template('story.html')
+
+@app.route('/Events')
+def Events():
+    return render_template('Events.html')
 
 @app.route('/rsvp', methods=['GET', 'POST'])
 def posts():

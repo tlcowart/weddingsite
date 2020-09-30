@@ -1,19 +1,15 @@
 {% extends 'base.html' %}
 
 {% block head  %}
+
 <title>The Wedding</title> 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 {% endblock %}
 
-{% block body  %} 
-<main role="main">
-    <div class="jumbotron">
-      <div class="col-sm-8 mx-auto">
-        <h1>Summer and Travis Wedding Site!</h1>
-        <p>Browse the links above and click RSVP button if you are wanting to add yourself to the guest list!</p>
-		<p>
-          <a class="btn btn-primary" href="/rsvp" role="button">RSVP</a>
-        </p>
-      </div>
-    </div>
-  </main>
+{% block body  %}
+<header id="showcase">
+	<h1 class="cows">Til' The Cowarts Come Home</h1>
+	<h3 class="tx">Austin, TX</h3>
+	<h3 class="december">December 31st, 2021</h3>
+</header>	
 {% endblock %}

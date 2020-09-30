@@ -1,37 +1,100 @@
 {% extends 'base.html' %}
 
 {% block head  %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='css/story.css')}}">
 <title>Story</title> 
 {% endblock %}
 
 {% set path = url_for('.static',filename='images/photos') %}
 {% block body  %}
-<h1>This is our story!</h1>
-<p>Content Here</p>
-<p>The image below is of us first dating!
-<div class="image center-left">
-  <img width=300 src="{{ path }}/1styr.jpg" />
-</div>
-<br>
-<hr>
-<br>
-<p>More Content Soon</p> 
-<div class="image">
-  <img width=300 src="{{ path }}/house.jpg" />
-</div>
-<br>
-<hr>
-<br>
-<p>Content 3</p>
-<div class="image-row">
-  <img width=300 src="{{ path }}/inverness_wall.jpg" />
-  <img width=415 src="{{ path }}/inverness.jpg" />
-</div>
-<p>Engagement Content</p>
-<div class ="image">
-    <img width=300 src="{{ path }}/engagement.jpg"  />
-</div>
+<div class="jumbotron bg-primary">
+<h1 class="story">This is Our Story!</h1>
+    <div class="col-sm-12 mx-auto">
+		<div class="container">
+			<div class="row">
+					<br>
+					<hr>
+					<div class="col-md-6 col-sm-6 col-xs-4">
+							<p class="begin">Our story begins when we first met in 2013 at a SMU/UNT football game in Denton, Texas. 
+							Our mutual friend Joe invited us to the game and I agreed to come hang out. 
+							My roommate at the time had to leave the game early so I didn't spend a ton of time talking to Summer then. 
+							However, there would be plenty of chances for us to get to know each other in the future, largely thanks to Joe!
+						</p>
+					<br>
+					</div>
+					<div class="col-md-6 col-sm-6 col-xs-4">
+						<img src="{{ path }}/1styr.jpg" class="img-thumbnail"/>			
+					</div>
+								
 
+			</div>				
+		</div>
+			<br>
+			<br>
+			<hr>
+			<br>
+			<br>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 col-sm-6 col-xs-4">
+					<p class="house">July 2017 we bought our first house together! 
+						This became the first time for us to own a home and made me feel somewhat more responsible overall
+						Summer and I have added our own flair to the home throughout the last few years and have welcomed company 
+					    on a few occassions.   </p>
+				</div>
+			<br>
+			<br>
+			<br>
+			<br>
+			<br>
+				<div class="col-md-6 col-sm-6 col-xs-4">
+					<img src="{{ path }}/house.jpg"  class="img-thumbnail" />
+				</div>
+			</div>
+		</div>
+				<br>
+				<br>
+				<hr>
+			<p class="Scotland">June 2018, we got to visit Scotland together! Some of the places we got to check out are Edinburgh (we stayed there a majority of the time), Inverness and Glasgow. 
+			Additionally, we got to have a nice day out on the beach of Portobello beach. We also got to see the Killers concert in Glasgow! This was my first experience outside of the country in Great Britain,
+			thus opening my eyes to another culture entirely. If you haven't had the chance to check out another country,
+			I highly suggest Scotland becoming one of the first. The countryside is remarkable and the cities have such
+		    grand structures that even predate the United States.</p>
+			 <div class="container"> 
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-4">
+							<img src="{{ path }}/inverness_wall.jpg" class="img-thumbnail"/>
+						</div>
+					<div class="col-md-6 col-sm-6 col-xs-4">
+							<img src="{{ path }}/inverness.jpg" class="img-thumbnail"/>
+				</div>
+			   </div>
+			 </div>  
+				<br>
+				<br>
+				<hr>
+				<br>
+				<br>
 
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-6 col-xs-4">
+						<p class="engagement">December 31st, 2019, I finally got on one knee in Brooklyn, New York and popped the question! I had help from Joe and Kathryn planning out the engagement,
+						getting the ring, all of it. The location was the Brooklyn Bridge Park, somewhere that Joe and Kathryn suggested and worked out perfectly!
+						</p>
+					</div>
+					<br>
+					<br>
+					<br>
+					<br>
+					<div class="col-md-6 col-sm-6 col-xs-4">
+						<img src="{{ path }}/engagement.jpg" class="img-thumbnail" />
+					</div>
+					<br>
+					<br>
+				</div>
+			</div>
+	</div>
+</div> <!-- jumbotron -->
 
 {% endblock %}

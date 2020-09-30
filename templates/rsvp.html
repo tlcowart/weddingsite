@@ -2,13 +2,12 @@
 
 {% block head  %}
 <title>New RSVP</title> 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/rsvp.css') }}">
 {% endblock %}
 
 {% block body  %} 
 <h1>New RSVP</h1>	
-	
-	<hr>
-	<h2>Create New RSVP!</h2>
+
 	<form action='/rsvp' method='POST'>
 		<label for="name">Name</label>
 		<input class="form-control" type="text" name='name' id='name' placeholder="Enter Name" aria-label="Enter Name">
